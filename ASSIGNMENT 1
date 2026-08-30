@@ -1,1 +1,77 @@
+#==========RUN THIS ENTIRE BLOCK TOGETHER===============
 
+   #------------LIST METHOS------------
+   
+students=["Qusai","Hardik","Daksh","Satish"]
+print("Original List:",students)
+
+   #append()-add item to end
+students.append("Rocket")
+print("After apppend(Rocket):",students)
+
+   #insert()-insert at specific index
+students.insert(2,"Umang")
+print("After insert(2,'Umang'):",students)
+
+
+   #remove()-delete first matching item
+students.remove("Satish")
+print("After remove('Satish'):",students)
+
+   #sort()-sort the list in place
+students.sort()
+print("After sort():", students)
+
+   #pop()-remove and return item by index
+removed_students = students.pop(0)
+print("Removed item:",removed_students)
+
+
+  #--------------TUPLE METHODS------------
+  
+students_tuple=("Qusai","Hardik","Daksh","Satish")
+print("Original Tuple:",students_tuple)
+
+  # count() - count occurrences of a value
+count_hardik = students_tuple.count("Hardik")       
+print("count('Hardik'):", count_hardik)
+
+  # index() - find first index of a value
+index_satish = students_tuple.index("Satish")  
+print("index('Satish'):", index_satish)
+
+  # Slicing - extract a sub-tuple
+sliced = students_tuple[1:3]  
+print("Slicing [1:3]:", sliced)
+
+new_tuple = students_tuple + ("Soham", "Aarav") # Concatenation - combine two tuples
+print("Concatenation (+):", new_tuple)
+
+(a, b, c, d) = students_tuple                  # Unpacking - assign tuple elements to variables
+print("Unpacked values:", a, b, c, d)
+
+
+
+
+#--------- DICTIONARY METHODS ----------
+print("\ndictionary")
+student_dict = {101: "Qusai", 102: "Hardik", 103: "Satish", 104: "Daksh"}
+print("Original Dictionary:", student_dict)
+
+print("keys():", list(student_dict.keys()))            # keys() - get all keys
+print("values():", list(student_dict.values()))        # values() - get all values
+print("items():", list(student_dict.items()))          # items() - get all key-value pairs
+
+roll_no = student_dict.get(105, "Not Found")   # get() - safely fetch value with default
+print("get(105, 'Not Found'):", roll_no)
+
+student_dict.update({105: "Soham", 102: "Aarav"})   # update() - merge/modify entries
+print("After update({105: 'Soham', 102: 'Aarav'}):", student_dict)
+
+removed_val = student_dict.pop(104)            # pop() - remove and return value by key
+print("After pop(104):", student_dict, "| Removed value:", removed_val)
+
+student_dict.setdefault(106, "Karan")          # setdefault() - get or insert default
+print("After setdefault(106, 'Karan'):", student_dict)
+
+#=================ENDO 0F BLOCK=====================
